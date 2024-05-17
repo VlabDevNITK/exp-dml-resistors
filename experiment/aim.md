@@ -1,1 +1,5 @@
-To acquire the ability to receive and understand Morse code transmissions of numbers.
+To understand the fundamentals of resistors and their color code system in order to accurately
+determine the resistance of a resistor..
+
+
+
