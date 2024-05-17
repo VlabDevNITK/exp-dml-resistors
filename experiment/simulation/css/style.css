@@ -1,298 +1,345 @@
-  /*mathstyle.css*/  
-span.frac {
-display: inline-block;
-text-align: center;
-vertical-align: middle;
-}
-span.frac > sup, span.frac > sub {
-display: block;
-font: inherit;
-padding: 0 0.3em;
-}
-span.frac > sup {border-bottom: 0.08em solid;}
-span.frac > span {display: none;}
+    /*mathstyle.css*/  
+ 
+            
+        #simscreen
+        {
+            position: relative;
+            left:0px;
+            top:0px;
+            height: 600px; 
+            width:800px;
+            border:solid 1px;
+        }
+        
+        #title{
+            position:relative;
+            left: 0px;
+            top: 0px;
+            height:40px;
+            font-size: 24px;
+            text-align:center;
+            background-color: black;
+            font-family: verdana;
+            color: White;
+            text-transform: uppercase; 
+        }
+        
+        #title h3
+        {
+            padding-top:2px;
+            margin:0px;
+        }	
+
+        select option {
+          padding: 5px;
+          
+      }
+
+      
+        
+        .simsubscreen
+        {
+            position:absolute;
+            left:50px;
+            top:50px;
+            height:530px;
+            width:745px;
+        }
+        
+        .incanvas
+        {
+            margin:5px 0 0 5px;
+            padding:0;
+            margin-bottom: 10px;
+        }
+        
+        #nextButton
+        {
+            position:absolute;
+            left:750px;
+            top:530px;
+            cursor:pointer;
+        }
+        
+        .circlebg
+        {
+            border-radius:100%;
+            font-size:25px;
+            color:#fff;
+            text-align:center;
+            background:#000
+        }
+        
+        .steptext
+        {
+            display:inline;
+            font-size:14px;
+        }
+        
+        #copyright{
+            position: absolute;
+            left:50px;
+            top: 580px;
+            font-size:12px
+        }
+        
+        /* css */
+        .submit-btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 80px;
+            margin-left: 230px;
+        }
+        
+        .para{
+            width: 705px;
+        }
+        
+        #nextButton1
+        {
+            position:absolute;
+            left:320px;
+            top:400px;
+            cursor:pointer;
+        }
+
+        
+      
+        
+        /* comments */
+        .simsubscreen1
+        {
+            position:absolute;
+            left:50px;
+            top:50px;
+            height:530px;
+            width:745px;
+        }
+        
+  
+  body {
+    font-family: 'Verdana' ;
     
-	
-#simscreen
-{
-	position: relative;
-	left:0px;
-	top:0px;
-	height: 600px; 
-	width:800px;
-	border:solid 1px;
+    margin: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+
+
+
+  #resistorForm {
+    /* background-color: #fff; */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* text-align: center; */
+    padding-right: 60px;
+    margin-right: 20px;
+    margin-top: -42px;
+    height: 370px;
+    width: 240px;
+    padding: 10px;
+  }
+
+  label {
+    font-size: 18px;
+    margin-bottom: -1px;
+    display: block;
+  }
+
+  select {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #808080;
+  }
+
+  #result {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    bottom: 200px;
+    right: -150px;
+  }
+
+  #errorMessage{
+    position: absolute;
+    bottom: 126px;
+  }
+
+
+  #result{
+    border: 1px solid #000000;;
+    /* padding: 10px; */
+    border-radius: 5px;
+    display: inline-block;
+    padding: 12px ;
+    background-color: #CCCCCC; /* Grey background color */
+    height: 45px;
+    width: 285px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: none;
+    visibility: hidden;
+    
+  }
+  
+  #firstBand, #secondBand, #thirdBand, #fourthBand{
+    height: 41px;
+    width: 226px;
+ 
+  }
+
+  #secondBand:disabled {
+  color: inherit; /* Inherit text color */
+  background-color: #fff; /* Set your desired background color */
+  border: 1px solid black; /* Set your desired border style */
+  opacity: 1; /* Set opacity to 1 to make it fully visible */
+  cursor: not-allowed; /* Change the cursor to indicate it's clickable */
 }
 
-#title{
-	position:relative;
-	left: 0px;
-	top: 0px;
-	height:40px;
-	font-size: 24px;
-	text-align:center;
-	background-color: black;
-	font-family: verdana;
-	color: White;
-	text-transform: uppercase; 
+#thirdBand:disabled{
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid black;
+  opacity: 1;
+  cursor: not-allowed;;
 }
 
-#title h3
-{
-	padding-top:2px;
-	margin:0px;
-}	
-
-.simsubscreen
-{
-	position:absolute;
-	left:50px;
-	top:50px;
-	height:530px;
-	width:745px;
+#fourthBand:disabled{
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid black;
+  opacity: 1;
+  cursor: not-allowed;
 }
 
-.incanvas
-{
-	margin:5px 0 0 5px;
-	padding:0;
+  .first{
+    margin-left: 80px;
+  }
+
+  .second{
+    margin-left: 80px;
+  }
+
+  .third{
+    margin-left: 50px;
+  }
+
+  .fourth{
+    margin-left: 38px;
+  }
+  
+  
+
+
+  p{
+    line-height: 1.4;
+  }
+
+  /* #fourthBand{
+    margin-left: 182px;
+  } */
+
+  #firstBand option{
+    background-color: #FFFFFF;
+    color: #000;
+    padding: 0.5px;
+  }
+
+  #firstBand option:hover{
+    background-color: #1cabdb;
+    color: #000;
+    padding: 0.5px;
+  }
+
+   /* Hover effect for disabled options */
+   #firstBand option:disabled:hover {
+    background-color: #1cabdb; /* Maintain background color for disabled options on hover */
+    color: #000;
+    cursor: default;
 }
 
-#nextButton
-{
-	position:absolute;
-	left:750px;
-	top:530px;
-	cursor:pointer;
-}
-
-.circlebg
-{
-	border-radius:100%;
-	font-size:25px;
-	color:#fff;
-	text-align:center;
-	background:#000
-}
-
-.steptext
-{
-	display:inline;
-	font-size:14px;
-}
-
-#copyright{
-	position: absolute;
-	left:50px;
-	top: 580px;
-	font-size:12px
-}
-select{
-	width:150px;
-	/* font-weight: bold; */
-	position:absolute;
-	left:310px;
-	top: 96px;
-	scroll-padding-left: 2%;
-	/* padding-bottom: 2%; */
-	scroll-padding-top: 2%;
-	font-weight: 600;
-	font-size: 15px;
-	cursor: pointer;
-	padding: 5px;
-	padding-top: 7px;
-	padding-bottom: 7px;
-}
-.button{
-	
-	position: absolute;
-	left:245px;
-	top: 190px;
-	border: #000 1px solid;
-	cursor: pointer;
-}
-.button:disabled{
-	color: inherit;
-	opacity: 1;
-	border: #000 1px solid;
-
-}
-label{
-	position: absolute;
-	left:170px;
-	top: 103px;
-	font-size:15px
-}
-.plybtn{
-	position: absolute;
-	left:300px;
-	top: 150px;
-	width:70px;
-	height:65px;
-	border-radius:100%;
-	border-color: #000;
-	color: #000;
-	padding-top:30px;
-	background-color: rgb(219, 221, 221);
-	cursor: pointer;
-	font-weight: 600;
-
-}
-.plybtn::before{
-	position: absolute;
-	content: '';
-	border-top: transparent 10px solid;
-	border-bottom: transparent 10px solid;
-	border-left: #000 15px solid;
-	top:45%;
-	left:50%;
-	transform: translate(-40%,-50%);
-	cursor: pointer;
-
-}
-.plybtn:disabled{
-	position: absolute;
-	left:300px;
-	top: 150px;
-	width:70px;
-	height:65px;
-	border-radius:100%;
-	border-color: #000;
-	color: #000;
-	padding-top:30px;
-	font-weight: 600;
-}
-p.ad{
-	position: absolute;
-	left:275px;
-	top: 230px;
-	font-size: 14px;
-}
-p.morse{
-	position: absolute;
-	left:388px;
-	top: 69px;
-	/* font-weight: 600; */
-	/* font-size: 20px; */
-	padding: 3px;
-	padding-left: 7px;
-	padding-right: 7px;
-	
-	
-	
-}
-p.selectmorse{
-	position: absolute;
-	left:243px;
-	top: 70px;
-}
-p.dm{
-	position: absolute;
-	left: 100px;
-	top: 135px;
-    width: 60px;
-	height:40px;
-	border-style: solid;
-	border-width: medium;
-	border-radius: 10px;
-	text-align: center;
-    text-decoration: solid;
-	font-style: bold;
-	border: 2px solid black;
-	font-size: larger;
-	padding-top: 2%;
-	padding-bottom: -2%;
-	padding-left: -2%;
-   padding-right: -2%;
-   
-   font-weight: 600;
-	font-size: 20px;
+.colorBand1 {
+  position: relative;
+  height: 58.2px;
+  width: 16px;
+  left: 415px; /* Adjust the left position based on your design */
+  bottom: 274px; /* Adjust the bottom position based on your design */
+  /* background-color: #de0909; */
+  margin-left: 130px;
+  border-radius: 3px;
+  z-index: 1; /* Ensure a higher z-index than the image */
 
 }
 
 
-.morsedisplay1{
-	position: absolute;
-	left: 490px;
-	top: 135px;
-   
-	font-weight: 700;
-	font-size: 58px;
-	font-family: monospace;
-}
-.button{
-	display: block; 
-	margin-left: 55px;
-	margin-top: 170px;
-}
-.repeat1{
-	position: absolute;
-	top:410px;
-	left:300px;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	background-color:rgb(224, 223, 223);
-	color:rgb(32, 32, 32);
-	margin-left: -5px;
-	padding: 8px 8px;
-	font-size:10px;
-	
-	
-}
-.warning{
-	position: absolute;
-	left:150px;
-	top: 280px;
-	font-size:14px
-}
-.pd{
-	/* margin: 40px; */
-	padding-right: 35px;
-}
-.pd1{
-	/* margin: 40px; */
-	padding-right: 35px;
+
+.colorBand2 {
+  position: relative;
+  height: 59px;
+  width: 16px;
+  left: 440px; /* Adjust the left position based on your design */
+  bottom: 337px; /* Adjust the bottom position based on your design */
+  /* background-color: #de0909; */
+  margin-left: 130px;
+  border-radius: 3px;
+  z-index: 1; /* Ensure a higher z-index than the image */
+
 }
 
-.opDoubledash{
-	font-weight: 600;
-	font-size: 15px;
-	padding-top: 5px;
-	padding-bottom: 5px;
+.colorBand3{
+  position: relative;
+  /* margin-left: 100px; */
+  left: 470px;
+  bottom: 395px;
+  border-radius: 3px;
+  z-index: 1; 
 }
 
-.repeatname{
-	font-family:Georgia, 'Times New Roman', Times, serif;
-	font-size: small;
+.colorBand4{
+  position: relative;
+  /* margin-left: 100px; */
+  left: 540px;
+  bottom: 455px;
+  border-radius: 3px;
+  z-index: 1; 
 }
-#numberInput{
-	position: absolute;
-	left: 24rem;
-	top: 11.25em;
-}
-#slider{
-	width: 39%;
-	position: absolute;
-	left: 185px;
-	top:15rem
-}
-.selectNumber{
-	position: absolute;
-	top: 150px;
-	left: 235px;
-}
-#morseImage{
-	position: absolute;
-	top: 255px;
-	height: 150px;
-	left: 490px;
-}
-#hintButton{
-	position: absolute;
-	padding: 10px 10px;
-	top: 320px;
-	left: 257px;
-	border-radius: 8px;
-	font-weight: 600;
-	font-family:  sans-serif;
-}
+
+/* .color-bands-container {
+  position: relative;
+} */
+
+
+
+/* .colorBand1{
+  position: relative;
+  left: 525px;
+  bottom: -21px;
+} */
+

@@ -1,21 +1,37 @@
-### These procedure steps will be followed on the simulator:
+### These procedure steps will be followed on the simulator  
 
-1.Open the simulation of Morse code Syntax by navigating through the introductory paragraph,and then proceed by selecting the next button located at bottom right corner.
+1.Open the simulation of resistors by navigating through the introductory paragraph, and then proceed by selecting the "NEXT" button located in the bottom right corner.
 
-![image1](images/image1.png)
+![Image 1](images/1.png)
 
-2.Select a number from the slider and click submit button.
+2.Select the first band color of the resistor.
 
-![image2](images/image2.png)
+![Image 2](images/2.png)
 
-3.Click on the Hint To Remember button to give an example of the Morse Code.
+3.Select the Second band color of the resistor.
 
-![image3](images/image3.png)
+![Image 3](images/3.png)
 
-4.Click on the play button to play the Morse Code syntax.
+4.Select the third band color of the resistor.
 
-![image4](images/image4.png)
+![Image 5](images/4.png)
 
-5.After the display of morse code, click on repeat button. It will redirect to STEP1 for selecting a new Morse Code Syntax.
+5.Select the fourth band color of the resistor.
 
-![image5](images/image5.png)
+![Image 5](images/5.png)
+
+
+6.In order to calculate the resistance of the resistor based on the color code, click on 
+the button "Calculate Resistance".
+
+![Image 5](images/6.png)
+
+
+7.Choose varied band colors to achieve distinct resistance output values for the resistor.
+
+![Image 5](images/7.png)
+
+
+
+
+

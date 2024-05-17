@@ -1,1 +1,1 @@
-## Exploring Morse Code : Numbers
+## Color code for resistors in Ham radio
