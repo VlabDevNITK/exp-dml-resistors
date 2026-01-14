@@ -5,7 +5,7 @@
 </tr>
 <tr style="background-color: transparent">
 <td>
-<ol>
+<ol  style="width: 500px">
 <li>National Institute of Amateur Radio (NIAR).(1983) "Amateur Radio Study Manual". <a href="http://www.niar.org/downloads/ham-downloads/Study-Manual.pdf">http://www.niar.org/downloads/ham-downloads/Study-Manual.pdf</a></li>
 <li> Amateur Station Operator’s Certificate Examination, - niar.org. (n.d.). <a href="https://niar.org/downloads/Study-Manual-General-Grade-22.pdf">https://niar.org/downloads/Study-Manual-General-Grade-22.pdf</a> <a href="https://www.niar.org/downloads/Study-Manual-Restricted-Grade-22.pdf"> https://www.niar.org/downloads/Study-Manual-Restricted-Grade-22.pdf</a>
 </li>
