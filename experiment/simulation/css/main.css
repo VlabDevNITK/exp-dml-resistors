@@ -1,1 +1,758 @@
-/* You CSS goes in here */
+body {
+	background-color: #ccc;
+	color: #222;
+	font: 1.0em helvetica;
+	user-select: none; /* Prevent text selection */
+    cursor: default;   /* Disable text cursor */
+}
+
+
+h1 {
+	font-size: 1.5em;
+	font-weight: bold;
+	/* margin: 1em 0; */
+}
+
+p {
+	margin: 1em 0;
+}
+
+.content {}
+
+.steptext {
+	display: inline;
+	font-size: 14px;
+
+	text-align: justify;
+}
+
+
+#firstBand, #secondBand, #thirdBand, #fourthBand{
+    height: 41px;
+    width: 145px;
+	outline: none;
+	border-radius: 10px;
+	cursor: pointer;
+ 
+  }
+  #calResist{
+	outline: none;
+	border-radius: 10px;
+  }
+
+  #secondBand:disabled {
+  color: inherit; /* Inherit text color */
+  background-color: #fff; /* Set your desired background color */
+  border: 1px solid black; /* Set your desired border style */
+  opacity: 1; /* Set opacity to 1 to make it fully visible */
+  cursor: not-allowed; /* Change the cursor to indicate it's clickable */
+}
+
+#thirdBand:disabled{
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid black;
+  opacity: 1;
+  cursor: not-allowed;;
+}
+
+#fourthBand:disabled{
+  color: inherit;
+  background-color: #fff;
+  border: 1px solid black;
+  opacity: 1;
+  cursor: not-allowed;
+}
+  
+	.first{
+	  margin-left: 80px;
+	}
+  
+	.second{
+	  margin-left: 80px;
+	}
+  
+	.third{
+	  margin-left: 50px;
+	}
+  
+	.fourth{
+	  margin-left: 38px;
+	}
+	
+	
+  
+	#firstBand option{
+		background-color: #FFFFFF;
+		color: #000;
+		padding: 0.5px;
+	  }
+	
+	  #firstBand option:hover{
+		background-color: #1cabdb;
+		color: #000;
+		padding: 0.5px;
+	  }
+	
+	   /* Hover effect for disabled options */
+	   #firstBand option:disabled:hover {
+		background-color: #1cabdb; /* Maintain background color for disabled options on hover */
+		color: #000;
+		cursor: default;
+	}
+	  
+
+#alphabetInput{
+	outline: none;
+}
+
+#errorText {
+	/* display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 18px; */
+	color: red;
+	text-align: center;
+	font-size: 18px;
+	position: relative;
+	top: -10px;
+}
+
+.place {
+	width: 40px;
+}
+
+.out {
+	grid-column: 1;
+	width: 50px;
+	height: 50px;
+	border-radius: 20%;
+	/* font-weight: 500; */
+	font-weight: bold;
+	border: 2.5px solid rgb(0, 0, 0);
+	color: #000000;
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1em 0;
+
+}
+
+.main-heading {
+
+	display: flex;
+	justify-content: center;
+	background-color: black;
+	/* border: 2px solid;
+  border-radius: 0%;
+  margin: 10px 0px 10px 0px; */
+	color: white;
+	font-family: verdana;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.main-canvas {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px solid black;
+	height: 600px;
+	box-sizing: border-box; /* Makes padding and border part of the height/width */
+    padding-bottom: 2px; /* Prevents content from overlapping with the footer */
+	
+}
+
+#simscreen {
+	position: relative;
+	left: 0%;
+	top: 55%;
+	height: 600px;
+	width: 800px;
+	border: solid 1px;
+}
+
+.simsubscreen {
+	margin: 10px 50px 0px 50px;
+
+}
+
+#copyright {
+	/* display: flex;
+	font-size: 12px;
+	justify-content: center;
+	text-align: center;
+
+	padding: 18px;
+    width: 100%; */
+	/* text-align: center;
+	font-size: 12px;
+	margin-top: 200px; */
+    /* padding: 12px; */	
+	display: flex;
+	flex-direction: column;
+	margin-top: 0;
+	font-size: 12px;
+	text-align: center;
+
+}
+
+
+.incanvas {
+	margin: 5px 0 0 5px;
+	padding: 0;
+	line-height: 1.6;
+}
+
+.grid-page1 {
+	/* display: grid;
+	grid-template-rows: 1fr 1fr auto; */
+	flex-grow: 1;
+}
+
+#nav {
+
+	align-self: flex-end;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+/* select {
+	width: 150px;
+
+	position: absolute;
+	left: 310px;
+	top: 96px;
+	scroll-padding-left: 2%;
+	
+	scroll-padding-top: 2%;
+	font-weight: 600;
+	font-size: 15px;
+	cursor: pointer;
+	padding: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+} */
+
+.button {
+
+	position: absolute;
+	left: 245px;
+	top: 190px;
+	border: #000 1px solid;
+	cursor: pointer;
+}
+
+.button:disabled {
+	color: inherit;
+	opacity: 1;
+	border: #000 1px solid;
+	cursor: not-allowed;
+
+}
+
+/* label {
+	position: absolute;
+	left: 170px;
+	top: 103px;
+	font-size: 15px
+} */
+
+#playButton {
+	position: relative;
+	/* position: absolute;
+	left:300px;
+	top: 150px; */
+	width: 70px;
+	height: 65px;
+	border-radius: 100%;
+	border-color: #000;
+	color: #000;
+	padding-top: 30px;
+	background-color: rgb(219, 221, 221);
+	cursor: pointer;
+	font-weight: 600;
+	outline: none;
+
+}
+
+#playButton::before {
+	position: absolute;
+	content: '';
+	border-top: transparent 10px solid;
+	border-bottom: transparent 10px solid;
+	border-left: #000 15px solid;
+	top: 45%;
+	left: 50%;
+	transform: translate(-40%, -50%);
+
+
+}
+
+#playButton:disabled {
+	/* position: absolute;
+	left:300px;
+	top: 150px; */
+	width: 70px;
+	height: 65px;
+	border-radius: 100%;
+	border-color: #000;
+	color: #000;
+	padding-top: 30px;
+	font-weight: 600;
+	cursor: not-allowed;
+}
+
+p.ad {
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+}
+
+p.morse {
+	position: absolute;
+	left: 388px;
+	top: 69px;
+	/* font-weight: 600; */
+	/* font-size: 20px; */
+	padding: 3px;
+	padding-left: 7px;
+	padding-right: 7px;
+
+
+
+}
+
+.selectmorse {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	align-items: center;
+
+}
+
+#morseOutput {
+	font-size: 65px;
+	letter-spacing: 8px;
+	color: black;
+	font-family: Arial, sans-serif;
+	/* background-color: yellow;  */
+	
+}
+
+/* p.selectmorse{
+	position: absolute;
+	left:243px;
+	top: 70px;
+} */
+p.dm {
+	border: 2px solid black;
+	padding: 1rem;
+	border-radius: 20%;
+	font-weight: 600;
+	font-size: larger;
+	height: 64px;
+	width: 46.6875px;
+}
+
+.morsePlay {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+}
+
+.morsedisplay1 {
+
+
+	font-weight: 700;
+	font-size: 58px;
+	font-family: monospace;
+}
+
+.button {
+	display: block;
+	margin-left: 55px;
+	margin-top: 170px;
+}
+
+.repeat1 {
+	position: absolute;
+	top: 410px;
+	left: 300px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: rgb(224, 223, 223);
+	color: rgb(32, 32, 32);
+	margin-left: -5px;
+	padding: 8px 8px;
+	font-size: 10px;
+
+
+}
+
+.warning {
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.pd {
+	/* margin: 40px; */
+	padding-right: 35px;
+}
+
+.pd1 {
+	/* margin: 40px; */
+	padding-right: 35px;
+}
+
+.opDoubledash {
+	font-weight: 600;
+	font-size: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.repeatname {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: small;
+}
+
+.numberInput {
+	cursor: pointer;
+	width: 8%;
+	border: 1px solid black;
+	border-radius: 10%;
+	text-align: center;
+}
+
+.numberInput:disabled {
+
+	cursor: not-allowed;
+}
+
+#slider {
+	width: 39%;
+	position: absolute;
+	left: 185px;
+	top: 15rem
+}
+
+.selectNumber {
+	position: absolute;
+	top: 150px;
+	left: 235px;
+}
+
+#morseImage {
+	width: 80%;
+	height: 100%;
+}
+
+.hintColumn {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	gap: 1rem;
+	padding: 6px;
+	/* position: relative;
+	top: -20px; */
+}
+
+
+#hintButton {
+
+	padding: 10px 10px;
+	cursor: pointer;
+	border-radius: 8px;
+	font-weight: 600;
+	font-family: sans-serif;
+	margin-top: -40px;
+	outline: none;
+}
+
+.imageContent {
+    display: none;
+    flex-direction: column;
+    /* Arrange items vertically */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* Ensure container takes full width */
+    height: auto;
+    /* Adjust height as needed */
+    text-align: center;
+	margin-top: -50px;
+    /* Center text inside the span */
+
+}
+:focus {
+	outline: 2px dashed blue;
+  }
+  
+  
+.nameDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+	position: relative;
+	top: -25px;
+}
+
+/* #resistorMain-div {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 2px;
+	padding: 0px;
+	width: 100%;
+	max-width: 420px;
+	margin: 0;
+} */
+
+#resistorMain-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+    gap: 20px; /* Add some space between the columns */
+    align-items: start; /* Align items to the start */
+}
+
+
+
+#resistorForm {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 214px;
+    height: 420px;
+	margin: 0;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+}
+
+.imgResistor {
+	display: flex;
+	justify-content: center; /* Center horizontally */
+	align-items: center;     /* Center vertically */
+	/* height: 100%;             */
+	height: 200px;
+  }
+  
+  .resImg {
+
+	height: auto;     /* Maintain the aspect ratio */
+  }
+
+  .resDiv {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100%;            /* Take full height of parent to enable vertical centering */
+}
+
+  /* .resDiv{
+	background-color: red;
+  } */
+
+  #nextButton{
+	position: relative;
+	top: 15px;
+	margin: 15px;
+	/* display: flex;
+	gap: 1em; */
+	
+  }
+
+
+.band-container {
+	text-align: center;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+select {
+	padding: 5px;
+	font-size: 16px;
+	width: 100%;
+}
+
+.btnResistance{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+button{
+	padding: 10px;
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#resImg{
+	position: relative;
+	left: 260px;
+	top: 30px;
+}
+
+
+#result{
+    border: 1px solid #000000;;
+    /* padding: 10px; */
+    border-radius: 10px;
+    display: inline-block;
+  
+    background-color: #CCCCCC; /* Grey background color */
+    height: 70px;
+    width: 270px;
+    /* margin-left: 200px; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: none;
+    visibility: hidden;
+	padding: 12px;
+	font-size: 2vw; 
+    
+  }
+
+  .responsive-text{
+	font-weight: bold;
+	font-size: 16px;
+	margin-bottom: 5px; /* Add margin to create space */
+  }
+
+  .responsive-text sup {
+	font-weight: bold;
+	font-size: 12px;
+  }
+
+  #resMain{
+	display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* #result {
+
+    position: relative;
+    top: -115px;
+    left: 190px;
+    margin-top: -38px;
+	max-width: 270px;
+  } */
+
+
+
+  #errorMessage{
+	/* position: relative;
+	top: -184px;
+	left: 400px;
+	font-size: 16px;
+	padding: 10px;
+	max-width: 230px; */
+	font-size: 16px;
+	position: relative;
+    top: -200px;
+    left: 415px;
+  }
+
+
+  .colorBand1 {
+    position: relative;
+    height: 60px;
+    width: 16px;
+    left: 350px;
+    bottom: 320px;
+    /* background-color: #de0909; */
+    margin-left: 130px;
+    border-radius: 3px;
+    z-index: 1;
+  
+  }
+  
+  
+  
+  .colorBand2 {
+    position: relative;
+    /* height: 59px;
+    width: 16px; */
+    left: 385px;
+    bottom: 382px;
+    /* background-color: #de0909; */
+    margin-left: 130px;
+    border-radius: 3px;
+    z-index: 1;
+  
+  }
+  
+  .colorBand3{
+	position: relative;
+	/* margin-left: 100px; */
+	left: 418px;
+    bottom: 440px;
+	border-radius: 3px;
+	z-index: 1; 
+  }
+  
+  .colorBand4{
+	position: relative;
+	/* margin-left: 100px; */
+	left: 494px;
+	bottom: 502px;
+	border-radius: 3px;
+	z-index: 1; 
+  }
+
+  .colorBand {
+	width: 16px;
+	margin: 5px;
+	background-color: transparent;  /* Default state */
+  }
+  
+  /* Specific styles for individual bands */
+  .colorBand1 {
+	height: 60px;
+  }
+  
+  .colorBand2, .colorBand3 {
+	height: 54px;
+	width: 10px;
+  }
+  
+  .colorBand4 {
+	height: 60px;
+  }
+  
+
+
+/* position:absolute;
+	left:50px;
+	top:50px;
+	height:530px;
+	width:745px; */
+
+/* ONLY do this, when the viewport has a width of at least 500px */
+
+
+
+

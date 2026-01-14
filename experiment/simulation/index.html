@@ -1,204 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SOLVE</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <script src="./js/script.js"></script>
-</head>
-<body style="margin: 0; font-family: Verdana;">
+    <meta name="description" content="A small project to remonstrate media queries and other responsive design patterns.">
+    <meta name="author" content="Rocco P">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/querry.css">
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  <style>
     
-<div id="simscreen">
-    <!-- <div id="title"><h3>FUNDAMENTALS OF RESISTORS</h3></div> -->
-    <div id="title"><h3>EXPLORING HAM RADIO : RESISTORS</h3></div>
-    <style>
-        label {
-      font-size: 14px;
-      font-family: Verdana;
-    }
-    
+  </style>
+  <body class="paintitred">
 
-select option{
-  align-items: center;
-  text-align: center;
-}
+    <main class="content">
+      <div   class="main-heading">
+        <h1>EXPLORING HAM RADIO : RESISTORS</h1>
 
-    </style>
+      </div>
+      <style>
 
-<div class="simsubscreen" id="canvas0"><br> 
-    <h4 class="incanvas">Objective:</h4> 
-    <p class="incanvas" style="font-size: 14px;">To understand the fundamentals of resistors and their color code system in order to accurately <br> determine the resistance of a resistor. </p> <br> <br> 
-    &nbsp;<span class="tooltip" style="border-bottom: 1px; color: black; top: 20px; cursor: pointer;"><strong>Description:</strong> <br> 
-    <!-- &nbsp;<span class="tooltip" style="border-bottom: 1px; color: black; top: 20px; cursor: pointer;"><strong>Description :</strong> <br> <br> -->
-    <p class="para" style="text-align: justify; font-size: 14px; margin-left: 4px; text-align: justify; ">Resistors are fundamental building blocks of Ham radio, being used for current limiters, voltage dividers, oscillators, filters and more. Resistors are essential components in electronics, impeding the flow of electrical current. To determine their resistance, a color code system is used. With four or five colored bands on a resistor, each signifies a numerical value or multiplier. Memorizing the sequence with the acronym BBROYGBVGWSN simplifies decoding, enabling the calculation of resistance.  
-    
-    </p> 
 
-    <p class="para" style="text-align: justify;font-size: 14px;" >Understanding the resistor color code is vital for professionals and enthusiasts alike. The coded information on the resistor bands provides quick and precise resistance identification, streamlining electronic circuit work. This standardized system enhances efficiency in electronics, allowing for effective integration of resistors into circuits and facilitating the troubleshooting process. Choosing resistors that can maintain their specified values under different operating conditions, contributing to the reliability and precision of electronic systems.</p>
-    
-    
-    </span>
 
-</div>
-
-<div class="simsubscreen" id="canvas1" style="visibility: hidden;">
-<!-- <strong class="incanvas">STEP</strong>
-<span class="circlebg">&nbsp;1&nbsp;</span> -->
-<p class="steptext" style="font-family: Verdana; font-size: 14px; ">&nbsp;<span style="margin-left: 20px; font-weight: bold;">Select the Resistor Band Color:</span></p> <br><br> <br> <br>
-<!-- <button id="nextButton1" name="submit" type="button" onclick=""></button> -->
-<div id="resistorForm">
-    <label for="firstBand" class="first">First Band:</label>
-    <select id="firstBand" name="firstBand" onchange="handleFirstBandChange()">
-      <!-- Color options for the resistor bands -->
+      </style>
+      <div class="main-canvas" >
+  
+        <div class="simsubscreen" id="canvas0" >
+          <div class="grid-page1">
+            <h4 class="incanvas" id="obj">Objective:</h4>
+            <p class="incanvas" style="font-size:14px;text-align: justify;">To understand the fundamentals of resistors and their color code system in order to accurately determine the resistance of a resistor.</p>
+            <br/>
+            
+            <br>
+            <h4 class="incanvas">Description:</h4>
+            
+            <p class="incanvas" style="font-size:14px; text-align: justify;">
+              Resistors are fundamental building blocks of Ham radio, being used for current limiters, voltage dividers, oscillators, filters and more. Resistors are essential components in electronics, impeding the flow of electrical current. To determine their resistance, a color code system is used. With four or five colored bands on a resistor, each signifies a numerical value or multiplier. Memorizing the sequence with the acronym BBROYGBVGWSN simplifies decoding, enabling the calculation of resistance.	
+            <br>
+                    <br>
+                    Understanding the resistor color code is vital for professionals and enthusiasts alike. The coded information on the resistor bands provides quick and precise resistance identification, streamlining electronic circuit work. This standardized system enhances efficiency in electronics, allowing for effective integration of resistors into circuits and facilitating the troubleshooting process. Choosing resistors that can maintain their specified values under different operating conditions, contributing to the reliability and precision of electronic systems.
+                    Resistors in ham radio circuits must be able to dissipate the heat generated when dealing with high power RF signals. Power ratings (in watts) are a key consideration when selecting resistors.
+                  </p>	
+         
       
-      <option value="selectColor" style="background-color: #FFFFFF; color: #000; "> Select Color</option>
-      <!-- <option value="" style="font-size:5pt; padding: 5px;" disabled>&nbsp;</option> -->
-    
-      <option  value="black" style="background-color: #000; padding: 5px; color: #FFFFFF; ">Black</option>
+         
+          </div>
+        
+          </div>
+          <div class="simsubscreen" id="canvas1" name="canvas1" style="display: none;">
+            
+
+         
+            <strong class="incanvas">STEP:</strong>
+            <p class="steptext">&nbsp;Select the Resistor band color.
+            </p>
+            <br><br><br>
+          
+           <div id="resistorMain-div">
+            <div style="display: flex;align-items: center; justify-content: center;">
+            <div id="resistorForm">
+              <div class="band-container">
+                  <label for="firstBand">First Band:</label>
+                  <select id="firstBand" name="firstBand" onchange="handleFirstBandChange(); hideResult();" >
+
+                      <option value="selectColor" style="background-color: #FFFFFF; color: #000;">Select Color</option>
+                      <option value="black" style="background-color: #000; color: #FFFFFF;">Black</option>
+                      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
+                      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
+                      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
+                      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
+                      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
+                      <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
+                      <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
+                      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
+                      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option>
+                  </select>
+              </div>
       
-      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
+              <div class="band-container">
+                  <label for="secondBand">Second Band:</label>
+                  <select id="secondBand" name="secondBand" onchange="handleSecondBandChange(); hideResult();" disabled>
+                     
+                      <option value="selectColor" style="background-color: #FFFFFF; color: #000;">Select Color</option>
      
-      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
+                      <option value="black" style="background-color: #000; color: #FFFFFF;">Black</option>
+                      
+                      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
+                      
+                      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
+                      
+                      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
+                      
+                      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
+                      
+                      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
+                    
+                      <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
+                     
+                      <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
+                      
+                      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
+                    
+                      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option>
+                  </select>
+              </div>
       
-      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
-      
-      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
-      
-      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
-    
-      <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
+              <div class="band-container">
+                  <label for="thirdBand">Third Band:</label>
+                  <select id="thirdBand" name="thirdBand" onchange="handleThirdBandChange(); hideResult();" disabled>
+  
+                      <option value="selectColor" style="background-color: #FFFFFF; color: #000;">Select Color</option>
      
-      <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
+                      <option value="black" style="background-color: #000; color: #FFFFFF; ">Black</option>
+                     
+                      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
+                      
+                      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
+                      
+                      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
+                    
+                      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
+                      
+                      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
+                     
+                      <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
+                      
+                      <!-- <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
+                      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
+                      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option> -->
+                      <option value="gold" style="background-color: #FFD700;; color: #000;">gold</option>
+                      
+                      <option value="silver" style="background-color: #C0C0C0; color: #000;">Silver</option>
+                  </select>
+              </div>
       
-      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
-      
-      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option>
+              <div class="band-container">
+                  <label for="fourthBand">Fourth Band:</label>
+                  <select id="fourthBand" name="fourthBand" onchange="hideResult();" disabled>
+                      <!-- Add the same color options as above -->
+                      <option value="selectColor" style="background-color: #FFFFFF; color: #000; ">Select Color</option>
     
-    </select>
- 
+                      <!-- <option value="black" style="background-color: #000; color: #FFFFFF;">Black</option> -->
+                      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
+                      
+                      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
+                      
+                      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
+                      
+                      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
+                     
+                      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
+                      
+                      <!-- <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
+                      <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
+                      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
+                      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option>-->
+                      <option value="gold" style="background-color: #FFD700;; color: #000;">Gold</option> 
+                     
+                      <option value="silver" style="background-color: #C0C0C0; color: #000;">Silver</option>
+                      
+                      <option value="nocolor" style="background-color: #FFFFFF; color: rgba(0, 0, 0, 0.1);">No Color</option>
+                  </select>
+              </div>
 
-    <label for="secondBand" class="second">Second Band:</label>
-    <select id="secondBand" name="secondBand" onchange="handleSecondBandChange()" disabled>
-      <!-- Color options for the resistor bands -->
-     
-      <option value="selectColor" style="background-color: #FFFFFF; color: #000;">Select Color</option>
-     
-      <option value="black" style="background-color: #000; color: #FFFFFF;">Black</option>
-      
-      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
-      
-      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
-      
-      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
-      
-      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
-      
-      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
-    
-      <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
-     
-      <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
-      
-      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
-    
-      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option>
-      
-    </select>
-    
-
-    <label for="thirdBand" class="third" >Third Band (Multiplier):</label>
-    <select id="thirdBand" name="thirdBand" onchange="handleThirdBandChange()" disabled>
-      <!-- Color options for the resistor bands -->
-      
-      <option value="selectColor" style="background-color: #FFFFFF; color: #000;">Select Color</option>
-     
-      <option value="black" style="background-color: #000; color: #FFFFFF; ">Black</option>
-     
-      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
-      
-      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
-      
-      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
-    
-      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
-      
-      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
-     
-      <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
-      
-      <!-- <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
-      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
-      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option> -->
-      <option value="gold" style="background-color: #FFD700;; color: #000;">gold</option>
-      
-      <option value="silver" style="background-color: #C0C0C0; color: #000;">Silver</option>
-      
-    </select>
-
-    <label for="fourthBand" class="fourth">Fourth Band (Tolerance):</label>
-    <select id="fourthBand" name="fourthBand" disabled>
-      <!-- Color options for the resistor bands -->
-    
-      <option value="selectColor" style="background-color: #FFFFFF; color: #000; ">Select Color</option>
-    
-      <!-- <option value="black" style="background-color: #000; color: #FFFFFF;">Black</option> -->
-      <option value="brown" style="background-color: #8B4513; color: #FFFFFF;">Brown</option>
-      
-      <option value="red" style="background-color: #FF0000; color: #FFFFFF;">Red</option>
-      
-      <option value="orange" style="background-color: #FFA500; color: #FFFFFF;">Orange</option>
-      
-      <option value="yellow" style="background-color: #FFFF00; color: #000;">Yellow</option>
-     
-      <option value="green" style="background-color: #008000; color: #FFFFFF;">Green</option>
-      
-      <!-- <option value="blue" style="background-color: #0000FF; color: #FFFFFF;">Blue</option>
-      <option value="violet" style="background-color: #8A2BE2; color: #FFFFFF;">Violet</option>
-      <option value="gray" style="background-color: #808080; color: #FFFFFF;">Grey</option>
-      <option value="white" style="background-color: #FFFFFF; color: #000;">White</option>-->
-      <option value="gold" style="background-color: #FFD700;; color: #000;">Gold</option> 
-     
-      <option value="silver" style="background-color: #C0C0C0; color: #000;">Silver</option>
-      
-      <option value="nocolor" style="background-color: #FFFFFF; color: rgba(0, 0, 0, 0.1);">No Color</option>
-    </select>
-    <!-- <div class="resistanceCalBtnDiv"> -->
-     <div style="margin-left: 30px;">
-    <button onclick="calculateResistanceAndUpdate()"  >Calculate Resistance</button>
-  </div>
-    
-  <!-- </div> -->
-
-    <div class="resistor-container">
+              <div class="btnResistance">
+                <button id="calResist" onclick="calculateResistanceAndUpdate()"  >Calculate Resistance</button>
+              </div>
+              
+              <div class="resistor-container" >
    
-   <div class="color-bands-container">
-   <div class="colorBand1"></div>
-    <div class="colorBand2"></div>
-    <div class="colorBand3"></div>
-    <div class="colorBand4"></div>
-  </div> 
-  </div>
-    <div id="errorMessage" ></div>
-  </div>
-  <img src="images/resistor3 images.png" alt="" height="100px" width="260px" style="position: absolute; margin-left: 380px; bottom: 300px;">
+                <div class="color-bands-container">
+                <div class="colorBand1"></div>
+                 <div class="colorBand2"></div>
+                 <div class="colorBand3"></div>
+                 <div class="colorBand4"></div>
+               </div> 
+               </div>
+              
+          </div> 
+        </div>
+        <div>
+          <div class="resDiv">
+         <div class="imgResistor">
+          <img class="resImg" src="images/resistor3 images.png" alt="" >
+        </div>
+      </div>
+      </div>
+        
+       
+        </div>
+        <div id="resMain">
+          <!-- <div id="result">
+            
+          </div> -->
 
-  <p id="result" style="visibility: hidden;" ></p>
-</div>
+          <div id="result">
+            <div id="resistanceText" class="responsive-text"></div>
+            <div id="toleranceText" class="responsive-text"></div>
+          </div>
+          
+        <!-- <p id="result" style="visibility: hidden;" ></p> -->
+      </div>
+
+        <div id="errorMain" style="display: flex; align-items: center; justify-content: center;">
+        <div id="errorMessage" ></div>
+      </div>
+     
+            
+          </div>
+          
+         
+           <div id="nav">
+	
+            <img id="nextButton" onclick="navNext()" src="images/Next.png" alt="" /></a>
+          
+          </div>
+          <div id="copyright"> &copy; <script>
+            document.write(new Date().getFullYear() - 1);
+            document.write(" - ");
+            document.write(new Date().getFullYear());
+          </script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+          </div>
+      </div>
+    
+    </main>
 
 
 
-</div>
-<div id="nav">
-    <img id="nextButton" onclick="navNext()" src="images/Next.png" alt="">
-</div>
-<div id="copyright"> &copy;2023-<script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering
-</div>
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-
-<script>
-// Add an event listener to the firstBand dropdown
+    <script>
 document.getElementById('firstBand').addEventListener('change', function() {
   // Get the selected color
   var selectedColor = this.value;
@@ -208,43 +242,28 @@ document.getElementById('firstBand').addEventListener('change', function() {
 
   // Apply the selected color to the first band
   colorBand1.style.backgroundColor = selectedColor;
-
-  // Add additional styles (height, width, margin) to the selected color element
-  colorBand1.style.height = '58px';  // Set the desired height
-  colorBand1.style.width = '16px';   // Set the desired width
-  colorBand1.style.margin = '5px';   // Set the desired margin
 });
 
 document.getElementById('secondBand').addEventListener('change', function() {
   // Get the selected color
   var selectedColor = this.value;
 
-  // Get the element representing the first band
+  // Get the element representing the second band
   var colorBand2 = document.querySelector('.colorBand2');
 
-  // Apply the selected color to the first band
+  // Apply the selected color to the second band
   colorBand2.style.backgroundColor = selectedColor;
-
-  // Add additional styles (height, width, margin) to the selected color element
-  colorBand2.style.height = '54px';  // Set the desired height
-  colorBand2.style.width = '16px';   // Set the desired width
-  colorBand2.style.margin = '5px';   // Set the desired margin
 });
 
 document.getElementById('thirdBand').addEventListener('change', function() {
   // Get the selected color
   var selectedColor = this.value;
 
-  // Get the element representing the first band
+  // Get the element representing the third band
   var colorBand3 = document.querySelector('.colorBand3');
 
-  // Apply the selected color to the first band
+  // Apply the selected color to the third band
   colorBand3.style.backgroundColor = selectedColor;
-
-  // Add additional styles (height, width, margin) to the selected color element
-  colorBand3.style.height = '53px';  // Set the desired height
-  colorBand3.style.width = '16px';   // Set the desired width
-  colorBand3.style.margin = '5px';   // Set the desired margin
 });
 
 document.getElementById('fourthBand').addEventListener('change', function() {
@@ -254,20 +273,15 @@ document.getElementById('fourthBand').addEventListener('change', function() {
   // Get the element representing the fourth band
   var colorBand4 = document.querySelector('.colorBand4');
 
-  // Check if the selected color is "No Color"
+  // If "No Color" is selected, remove the background color
   if (selectedColor === 'nocolor') {
-    // If "No Color" is selected, remove the background color
     colorBand4.style.backgroundColor = 'transparent';
   } else {
     // Apply the selected color to the fourth band
     colorBand4.style.backgroundColor = selectedColor;
   }
-
-  // Add additional styles (height, width, margin) to the selected color element
-  colorBand4.style.height = '59px';  // Set the desired height
-  colorBand4.style.width = '16px';   // Set the desired width
-  colorBand4.style.margin = '5px';   // Set the desired margin
 });
+
 
 // Define variables to store the selected values of the second, third, and fourth bands
 var secondBandSelectedValue = null;
@@ -324,31 +338,6 @@ function handleFirstBandChange() {
 
 
 
-// function handleSecondBandChange() {
-//     var secondBandDropdown = document.getElementById('secondBand');
-//     var thirdBandDropdown = document.getElementById('thirdBand');
-//     var fourthBandDropdown = document.getElementById('fourthBand');
-
-//     // Store the selected value of the fourth band before resetting it
-//     fourthBandSelectedValue = fourthBandDropdown.value;
-
-//     // Enable or disable the third band based on the selection of the second band
-//     thirdBandDropdown.disabled = secondBandDropdown.value === 'selectColor';
-
-//     // Enable the fourth band if the second band is already selected
-//     fourthBandDropdown.disabled = secondBandDropdown.value !== 'selectColor';
-
-//     // Reset and disable the fourth band
-//     fourthBandDropdown.selectedIndex = 0;
-//     if (secondBandDropdown.value !== 'selectColor') {
-//         fourthBandDropdown.disabled = false;
-//     }
-
-//     // Check if the fourth band was previously selected, restore its selected value
-//     if (fourthBandSelectedValue !== 'selectColor') {
-//         fourthBandDropdown.value = fourthBandSelectedValue;
-//     }
-// }
 
 function handleSecondBandChange(){
   var secondBandDropdown =document.getElementById('secondBand')
@@ -405,23 +394,143 @@ function handleThirdBandChange() {
 }
 
   // Add a variable to track whether the initial calculation has been performed
-  var initialCalculationDone = false;
+// Flag to track whether the initial calculation is done
+let initialCalculationDone = false;
 
-  function calculateResistanceAndUpdate() {
-    // Perform the initial calculation
-    calculateResistance();
+// Function to hide the result
+function hideResult() {
+  document.getElementById('result').style.visibility = "hidden";
+  document.getElementById('result').style.display = "none";
+}
 
-    // Set the variable to true after the initial calculation
-    initialCalculationDone = true;
+// Function to calculate resistance and show the result after calculation
+function calculateResistanceAndUpdate() {
+  // Get the selected colors for all bands
+  const firstBandColor = document.getElementById("firstBand").value;
+  const secondBandColor = document.getElementById("secondBand").value;
+  const thirdBandColor = document.getElementById("thirdBand").value;
+  const fourthBandColor = document.getElementById("fourthBand").value;
 
-    // Enable the onchange attributes for real-time updates
-    document.getElementById('firstBand').setAttribute('onchange', 'handleFirstBandChange(); calculateResistance();');
-    document.getElementById('secondBand').setAttribute('onchange', 'handleSecondBandChange(); calculateResistance();');
-    document.getElementById('thirdBand').setAttribute('onchange', 'handleThirdBandChange(); calculateResistance();');
-    document.getElementById('fourthBand').setAttribute('onchange', 'calculateResistance();');
+  // Check if any of the selected colors is "selectColor"
+  if (firstBandColor === "selectColor" || 
+      secondBandColor === "selectColor" || 
+      thirdBandColor === "selectColor" || 
+      fourthBandColor === "selectColor") {
+      
+    // Hide the result if "selectColor" is chosen
+    const resistanceValue = document.getElementById("result");
+    resistanceValue.style.visibility = "hidden";
+    resistanceValue.style.display = "none";
+
+    // Show the error message
+    document.getElementById("errorMessage").innerText =
+      "Please select the band colors";
+    document.getElementById("errorMessage").style.color = "red";
+    return; // Stop further execution
   }
 
+  // If all colors are valid, hide the error message and calculate the resistance
+  document.getElementById("errorMessage").innerText = ""; // Clear the error message
 
-</script>
-</body>
-</html> 
+  // Set the initialCalculationDone to true
+  initialCalculationDone = true;
+
+  // Call the calculateResistance function to perform the calculation
+  calculateResistance();
+
+  // Show the result
+  const resistanceValue = document.getElementById("result");
+  resistanceValue.style.visibility = "visible";
+  resistanceValue.style.display = "inline-block";
+}
+
+
+// function calculateResistance() {
+//   const firstBandColor = document.getElementById("firstBand").value;
+//   const secondBandColor = document.getElementById("secondBand").value;
+//   const thirdBandColor = document.getElementById("thirdBand").value;
+//   const fourthBandColor = document.getElementById("fourthBand").value;
+
+//   // Show or hide the result element based on the condition
+//   var resistanceValue = document.getElementById("result");
+//   if (
+//     firstBandColor === "selectColor" ||
+//     secondBandColor === "selectColor" ||
+//     thirdBandColor === "selectColor" ||
+//     fourthBandColor === "selectColor"
+//   ) {
+//     // Hide the result element if colors are not selected
+//     hideResult();
+//     document.getElementById("errorMessage").innerText =
+//         "Please select the band colors";
+//       document.getElementById("errorMessage").style.color = "red";
+//       document.getElementById("errorMessage").style.marginLeft = "5px";
+  
+    
+//     return;
+//   }
+
+//   // Clear the error message when valid colors are selected
+//   document.getElementById("errorMessage").innerText = "";
+
+//   // Perform resistance calculation
+//  // Perform resistance calculation
+// const firstTwoDigits =
+//   getBandValue(firstBandColor) * 10 + getBandValue(secondBandColor);
+// const resistance = `Resistance: <strong>${firstTwoDigits} x 10<sup style="font-weight: bold;">${getMultiplier(thirdBandColor)}</sup> ohms</strong>`;
+// const tolerance = `<strong>Tolerance: ±${getTolerance(fourthBandColor)}%</strong>`;
+
+// // Update the result element with the calculated values (all bold)
+// document.getElementById(
+//   "result"
+// ).innerHTML = `<span style="font-family: Verdana; font-size: 16px; font-weight: bold;">${resistance}</span><br><span style="font-family: Verdana; font-size: 16px; font-weight: bold;">${tolerance}</span>`;
+
+// }
+
+function calculateResistance() {
+  const firstBandColor = document.getElementById("firstBand").value;
+  const secondBandColor = document.getElementById("secondBand").value;
+  const thirdBandColor = document.getElementById("thirdBand").value;
+  const fourthBandColor = document.getElementById("fourthBand").value;
+
+  // Show or hide the result element based on the condition
+  if (
+    firstBandColor === "selectColor" ||
+    secondBandColor === "selectColor" ||
+    thirdBandColor === "selectColor" ||
+    fourthBandColor === "selectColor"
+  ) {
+    hideResult();
+    document.getElementById("errorMessage").innerText =
+      "Please select the band colors";
+    document.getElementById("errorMessage").style.color = "red";
+    document.getElementById("errorMessage").style.marginLeft = "5px";
+    return;
+  }
+
+  // Clear the error message when valid colors are selected
+  document.getElementById("errorMessage").innerText = "";
+
+  // Perform resistance calculation
+  const firstTwoDigits =
+    getBandValue(firstBandColor) * 10 + getBandValue(secondBandColor);
+  const multiplier = getMultiplier(thirdBandColor);
+  const resistance = `Resistance: ${firstTwoDigits} x 10<sup>${multiplier}</sup> Ohm`;
+  const tolerance = `Tolerance: ±${getTolerance(fourthBandColor)}%`;
+
+  // Update the result element with the calculated values
+  document.getElementById("resistanceText").innerHTML = resistance;
+  document.getElementById("toleranceText").innerHTML = tolerance;
+
+  // Show the result if it was hidden before
+  document.getElementById("result").style.display = "block";
+}
+
+
+      
+      
+      </script>
+
+
+  </body>
+</html>

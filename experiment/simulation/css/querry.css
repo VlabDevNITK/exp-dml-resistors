@@ -1,0 +1,448 @@
+
+@media screen and (min-width: 300px) {
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  h1 {
+    font-size: 1.4em;
+    text-align: center;
+  }
+  #copyright{
+    margin: 0px 20px;
+  
+  }
+  .numberInput{
+    width: 15%;
+  }
+  #morseOutput {
+    grid-column: 1;
+    font-size: 45px;
+    font-family: Arial, sans-serif;
+}
+.main-canvas{
+  height: 100%;
+  width: auto;
+  display: flex;
+  /* gap: 1em; */
+}
+
+#resistorMain-div {
+  grid-template-columns: 1fr; /* Stack the items in a single column */
+  gap: 20px; /* Add some space between the columns */
+  align-items: start; /* Align items to the start */
+}
+.resImg{
+  width: 260px;
+}
+
+.colorBand1 {
+  position: relative;
+  height: 56px;
+  width: 14px;
+  left: -123px;
+  bottom: -8px;
+  /* background-color: #de0909; */
+  margin-left: 130px;
+  border-radius: 3px;
+  z-index: 1;
+
+}
+.colorBand2{
+  position: relative;
+  height: 51px;
+  width: 14px;
+  left: -94px;
+  bottom: 46px;
+  /* background-color: #de0909; */
+  margin-left: 130px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.colorBand3{
+  position: relative;
+  /* margin-left: 100px; */
+  height: 51px;
+  width: 14px;
+  left: 68px;
+  bottom: 97px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.colorBand4 {
+  position: relative;
+  /* margin-left: 100px; */
+  height: 56px;
+  width: 14px;
+  left: 132px;
+  bottom: 150px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+#errorMessage {
+
+  position: relative;
+  top: -10px;
+  left: -8px;
+  max-width: 210px;
+}
+#result {
+  top: 0;             /* Adjust position for smaller screens */
+  left: 0;
+  margin-top: 10px;    /* Provide some margin if needed */
+  max-width: 100%;     /* Make it take full width of the container */
+  padding: 8px;       /* Add padding for better readability */
+  font-size: 14px;     /* Adjust font size for smaller screens */
+  box-sizing: border-box; /* Ensure padding and width fit within the screen */
+  
+}
+
+.imgResistor {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  /* height: 100%;             */
+  height: 58px;
+  }
+
+  #resMain{
+    margin: 1em;
+  }
+
+
+.incanvas {
+    margin-top: 0px;
+    line-height: 1.5;
+}
+
+
+  .morsePlay{
+    grid-template-columns: 1fr;
+   }
+
+   .responsive-text{
+    font-weight: bold;
+    font-size: 16px;
+    }
+  
+    .responsive-text sup {
+    font-weight: bold;
+    font-size: 12px;
+    }
+}
+@media screen and (min-width: 500px) {
+
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+  
+    h1 {
+      font-size: 1.5em;
+    }
+
+     .morsePlay{
+      grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+     }
+      #morseOutput {
+        grid-column: 1;
+        font-size: 60px;
+        font-family: Arial, sans-serif;
+    }
+    .hintColumn {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+      gap: 1rem;
+      
+    }
+    .main-canvas{
+      height: 100%;
+      width: auto;
+      display: flex;
+      /* gap: 1em; */
+    }
+
+    .resImg{
+      width: 300px;
+    }
+    #resistorMain-div {
+      grid-template-columns: 1fr; /* Stack the items in a single column */
+      gap: 20px; /* Add some space between the columns */
+      align-items: start; /* Align items to the start */
+  }
+  .colorBand1 {
+    position: relative;
+    height: 61px;
+    width: 16px;
+    left: -133px;
+    bottom: -23px;
+    margin-left: 130px;
+    border-radius: 3px;
+    z-index: 1;
+  
+  }
+  .colorBand2{
+    position: relative;
+    height: 55px;
+    width: 16px;
+    left: -102px;
+    bottom: 36px;
+    margin-left: 130px;
+    border-radius: 3px;
+    z-index: 1;
+  }
+  
+  .colorBand3{
+    position: relative;
+    height: 55px;
+    width: 16px;
+    left: 64px;
+    bottom: 91px;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .colorBand4 {
+    position: relative;
+    height: 61px;
+    width: 16px;
+    left: 137px;
+    bottom: 148px;
+    border-radius: 3px;
+    z-index: 1;
+}
+
+#errorMessage {
+
+  position: relative;
+  top: -18px;
+  left: -8px;
+  max-width: 210px;
+}
+#result {
+  top: 0;             /* Adjust position for smaller screens */
+  left: 0;
+  margin-top: 10px;    /* Provide some margin if needed */
+  max-width: 100%;     /* Make it take full width of the container */
+  padding: 10px;       /* Add padding for better readability */
+  font-size: 14px;     /* Adjust font size for smaller screens */
+  box-sizing: border-box; /* Ensure padding and width fit within the screen */
+}
+
+.imgResistor {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  /* height: 100%;             */
+  height: 95px;
+  }
+  #resMain{
+    display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    gap: 20px; /* Adjust the gap size as needed */
+    margin: 1em;
+    }
+   
+    .incanvas {
+      margin: 5px 0 0 5px;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .responsive-text{
+      font-weight: bold;
+      font-size: 16px;
+      }
+    
+      .responsive-text sup {
+      font-weight: bold;
+      font-size: 12px;
+      }
+
+  }
+  
+  
+  @media screen and (min-width: 720px) {
+  
+    body {
+      background-color: rgb(255, 255, 255);
+    }
+  
+    .content {
+      height: 600px;
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .morsePlay{
+      grid-template-columns: 1fr 1fr 1fr;
+     }
+     #morseOutput {
+      grid-column: 1;
+      font-size: 60px;
+      font-family: Arial, sans-serif;
+  }
+  .hintColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+    
+  }
+  .resDiv {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100%;            /* Take full height of parent to enable vertical centering */
+}
+  #resistorMain-div {
+    grid-template-columns: 1fr 1fr; /* Stack the items in a single column */
+    gap: 20px; /* Add some space between the columns */
+    align-items: start; /* Align items to the start */
+}
+.colorBand1 {
+  position: relative;
+  height: 61px;
+  width: 16px;
+  left: 227px;
+  bottom: 365px;
+  margin-left: 130px;
+  border-radius: 3px;
+  z-index: 1;
+
+}
+
+.colorBand2 {
+  position: relative;
+  /* height: 59px;
+  width: 16px; */
+  height: 55px;
+  width: 16px;
+  left: 260px;
+  bottom: 423px;
+  margin-left: 130px;
+  border-radius: 3px;
+  z-index: 1;
+
+}
+
+.colorBand3{
+	position: relative;
+  height: 55px;
+  width: 16px;
+	left: 423px;
+  bottom: 478px;
+	border-radius: 3px;
+	z-index: 1; 
+  }
+
+  .colorBand4{
+    position: relative;
+    height: 61px;
+    width: 16px;
+    left: 497px;
+    bottom: 536px;
+    border-radius: 3px;
+    z-index: 1; 
+    }
+
+    #errorMessage{
+      position: relative;
+      top: -200px;
+      left: 180px;
+      max-width: 210px;
+      }
+
+   #result {
+    position: relative;
+    top: -115px;
+    left: 172px;
+    margin-top: -38px;
+	max-width: 270px;
+  }
+
+  .imgResistor {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    /* height: 100%;             */
+    height: 200px;
+    }
+
+    .incanvas {
+      margin: 5px 0 0 5px;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .responsive-text{
+      font-weight: bold;
+      font-size: 16px;
+      }
+    
+      .responsive-text sup {
+      font-weight: bold;
+      font-size: 12px;
+      }
+   
+  
+  }
+  
+  
+  @media screen and (min-width: 960px) {
+  
+    body {
+      font-size: 1.25em;
+    }
+    .content {
+      height: 600px;
+      width: 800px;
+      margin: 0 auto;
+    }
+    .numberInput{
+      width: 8%;
+    }
+    #morseOutput {
+      grid-column: 1;
+      font-size: 65px;
+      font-family: Arial, sans-serif;
+  }
+  .hintColumn {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+  }
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .main-canvas{
+    height: 600px;
+    width: auto;
+  }
+
+  .resImg{
+    width: 300px;
+  }
+
+  .incanvas {
+    margin: 5px 0 0 5px;
+    padding: 0;
+    line-height: 1.6;
+  }
+  .responsive-text{
+    font-weight: bold;
+    font-size: 18px;
+    }
+  
+    .responsive-text sup {
+    font-weight: bold;
+    font-size: 14px;
+    }
+
+
+  }

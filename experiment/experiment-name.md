@@ -1,1 +1,1 @@
-## Color code for resistors in Ham radio
+## Color code for resistors in HAM radio
